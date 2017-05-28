@@ -34,7 +34,11 @@ class Manager(object):
                                               proxy.port)
         return auth_string
 
-if __name__ == "__main__":
-    manager = Manager()
-    print manager.get_proxy_credentials()
+    def get_twitter_urls(self):
+        try:
+            with open(self.resources_path + "/twitter-urls.yml", 'r') as yml:
+                return yaml.load(yml)
+        except Exception as e:
+            Logger.logger.error(e)
+
 

@@ -26,7 +26,3 @@ class Picker(object):
 
     def get_random_proxy(self):
         return random.choice(self.proxies)
-
-if __name__ == "__main__":
-    picker = Picker()
-    print picker.get_random_proxy()
