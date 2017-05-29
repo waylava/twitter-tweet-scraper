@@ -12,9 +12,6 @@ only_tweet_tags = bs4.SoupStrainer('div', class_=has_class('tweet'), **{'data-tw
 
 
 class Parser(object):
-    def __init__(self):
-        pass
-
     @staticmethod
     def parse_tweet_tag(tag, expand_emojis=True):
         tweet_id = tag['data-tweet-id']

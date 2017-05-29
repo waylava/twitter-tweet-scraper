@@ -111,8 +111,8 @@ class Search(object):
                     for tweet in self.parser.parse_search_results(response_dict['items_html'].encode('utf8')):
                         yield tweet
                     has_more_items = True
-                except Exception as e:
-                    Logger.logger.error(e)
-            except Exception as e:
-                Logger.logger.error(e)
+                except Exception as _:
+                    pass
+            except Exception as _:
+                pass
         Logger.logger.info(self.counter.total_requests)

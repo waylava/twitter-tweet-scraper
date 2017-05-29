@@ -8,7 +8,11 @@ class Manager(object):
         self.resources_path = Paths.get_resources_path()
 
     def get_db_credentials(self):
-        pass
+        try:
+            with open(self.resources_path + "/db-credentials.yml", 'r') as yml:
+                return yaml.load(yml)
+        except Exception as e:
+            Logger.logger.error(e)
 
     def get_proxies(self):
         try:
@@ -40,5 +44,3 @@ class Manager(object):
                 return yaml.load(yml)
         except Exception as e:
             Logger.logger.error(e)
-
-

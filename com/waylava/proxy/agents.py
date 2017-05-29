@@ -9,7 +9,7 @@ from com.waylava.util.paths import Paths
 
 class UserAgents:
     def __init__(self):
-        self.agents = []
+        self.agents = list()
         self.load_agents()
 
     @staticmethod
