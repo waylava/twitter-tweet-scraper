@@ -1,2 +1,2 @@
 # twitter-tweet-scraper
-Twitter tweet scraper
+Twitter Tweet Scraper
