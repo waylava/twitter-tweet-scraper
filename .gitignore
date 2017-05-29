@@ -103,5 +103,5 @@ ENV/
 # Repo specific ignores
 /resources
 /.idea
-.log
-.log.*
+twitter-tweet-scraper.log
+twitter-tweet-scraper.log.*
